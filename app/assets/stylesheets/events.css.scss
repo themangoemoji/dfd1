@@ -1,3 +1,32 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'colors';
+
+.event {
+
+  h1 {
+    font-family: "Aleo", Times, serif;
+    color: $green;
+    margin: 0rem;
+  }
+
+  .location {
+    color: $green;
+    margin: 0rem;
+    font-size: 0.8rem;
+
+  }
+
+  padding:0rem 1rem 0rem;
+  margin:1rem;
+  border-radius:3px;
+  color: $light;
+  border-left:  2px solid $green;
+
+  .image {
+    float: right;
+  }
+}
+

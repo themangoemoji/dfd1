@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
+font-family: "Times New Roman", Times, serif;
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<div class="event">
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
+<h1> <%= @event.title +"@" %> </h1>
+
+<p class="location">
+  <%= '@'+@event.location %>
 </p>
 
 <p>
@@ -20,10 +19,9 @@
   <%= @event.description %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @event.image %>
-</p>
+<img class="image" src="<%= @event.image %>">
+
+</div>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
