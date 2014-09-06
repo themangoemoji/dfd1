@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
-font-family: "Times New Roman", Times, serif;
 
 <div class="event">
 
-<h1> <%= @event.title +"@" %> </h1>
+    <img class="image" src="<%= @event.image %>">
+    <div class="info">
+        <h1> <%= @event.title %> </h1>
 
-<p class="location">
-  <%= '@'+@event.location %>
-</p>
+        <p class="location">
+        <%= @event.location %>
+        </p>
 
-<p>
-  <strong>Starts at:</strong>
-  <%= @event.starts_at %>
-</p>
+        <p>
+        <strong>Starts at:</strong>
+        <%= @event.starts_at %>
+        </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+        <p>
+        <strong>Description:</strong>
+        <%= @event.description %>
+        </p>
+    </div>
 
-<img class="image" src="<%= @event.image %>">
 
 </div>
 
