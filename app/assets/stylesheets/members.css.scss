@@ -4,17 +4,27 @@
 @import 'colors';
 
 .member {
-    @include fill-parent;
+    @include outer-container;
     h1 {
-        color: $light;
-        font-size: 3em;
+        color: $dark;
+        font-size: 5em;
         font-family: "Aleo";
+        text-align: center;
     }
+
     .picture {
-        @include span-columns(3);
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
+        text-align: center;
     }
 
+    @include clearfix();
+}
+
+.info{
+    @include span-columns(6);
+    @include shift(3);
+    @include clearfix();
+    text-align: center;
 }

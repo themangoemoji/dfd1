@@ -1,32 +1,16 @@
-<h1>Listing members</h1>
-
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Picture</th>
-            <th>Major</th>
-            <th>Joined on</th>
-            <th>Position</th>
-            <th colspan="3"></th>
-        </tr>
-    </thead>
-
-    <tbody>
-    <% @members.each do |member| %>
-        <tr>
-        <div class=member">
-            <td><%= member.name %></td>
-            <%= image_tag member.picture_url(:thumb).to_s %>
-            <td><%= member.picture %></td>
-            <td><%= member.position %></td>
-        </div>
-        <td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+<% @members.each do |member| %>
+    <tr>
+    <div class=member">
+        <td><%= member.name %></td>
+        <%= image_tag member.picture_url(:thumb).to_s %>
+        <td><%= member.position %></td>
+    </div>
+    <td><%= link_to 'Show', member %></td>
+    <td><%= link_to 'Edit', edit_member_path(member) %></td>
+    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
 <% end %>
-    </tbody>
+</tbody>
 </table>
 
 <br>

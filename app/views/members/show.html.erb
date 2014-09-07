@@ -1,29 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <div class="member"
-    <h1>
-        <%= @member.name %>
-    </h1>
+    <div>
+        <h1>
+            <%= @member.name %>
+        </h1>
+        <br>
+        <p class="picture">
+        <%= image_tag @member.picture_url(:large).to_s %>
+        </p>
+    </div>
+</div>
 
+<div class="info">
     <p>
-    <img class="picture" src="<%= @member.picture %>">
-    </p>
-
-    <p>
+    <%= @member.position %>
+    <br>
     <strong>Major:</strong>
     <%= @member.major %>
-    </p>
-
-    <p>
+    <br>
     <strong>Joined on:</strong>
     <%= @member.joined_on %>
     </p>
 
-    <p>
-    <strong>Position:</strong>
-    <%= @member.position %>
-    </p>
 </div>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<br>
+
+<div>
+    <%= link_to 'Edit', edit_member_path(@member) %> |
+    <%= link_to 'Back', members_path %>
+</div>
