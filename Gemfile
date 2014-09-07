@@ -11,4 +11,5 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'neat'
 gem 'better_errors'
-gem  'carrierwave'
+gem  "carrierwave"
+gem  "rmagick", require: false

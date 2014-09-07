@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @member.name %>
-</p>
+<div class="member"
+    <h1>
+        <%= @member.name %>
+    </h1>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @member.picture %>
-</p>
+    <p>
+    <img class="picture" src="<%= @member.picture %>">
+    </p>
 
-<p>
-  <strong>Major:</strong>
-  <%= @member.major %>
-</p>
+    <p>
+    <strong>Major:</strong>
+    <%= @member.major %>
+    </p>
 
-<p>
-  <strong>Joined on:</strong>
-  <%= @member.joined_on %>
-</p>
+    <p>
+    <strong>Joined on:</strong>
+    <%= @member.joined_on %>
+    </p>
 
-<p>
-  <strong>Position:</strong>
-  <%= @member.position %>
-</p>
+    <p>
+    <strong>Position:</strong>
+    <%= @member.position %>
+    </p>
+</div>
 
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Back', members_path %>

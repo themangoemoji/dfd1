@@ -1,37 +1,43 @@
-<%= form_for(@member) do |f| %>
-  <% if @member.errors.any? %>
+<%= form_for(@member, :html => {:multipart => true}) do |f| %>
+    <% if @member.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+    <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
 
-      <ul>
-      <% @member.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <ul>
+        <% @member.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+    <% end %>
+    </ul>
+</div>
   <% end %>
 
-  <div class="field">
+<div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :picture %><br>
-    <%= f.text_field :picture %>
-  </div>
-  <div class="field">
+</div>
+<p>
+<%= f.label "Browse for image." %><br>
+<%= f.file_field :picture %>
+</p>
+<div class="field">
+    <%# <%= f.label :remote_picture_url , "or image URL" %><br>
+    <%# <%= f.text_field :remote_picture_url%>
+    <%= f.label :remote_picture_url, "or paste a URL" %><br>
+    <%= f.text_field :remote_picture_url %>
+</div>
+<div class="field">
     <%= f.label :major %><br>
     <%= f.text_field :major %>
-  </div>
-  <div class="field">
+</div>
+<div class="field">
     <%= f.label :joined_on %><br>
     <%= f.date_select :joined_on %>
-  </div>
-  <div class="field">
+</div>
+<div class="field">
     <%= f.label :position %><br>
     <%= f.text_field :position %>
-  </div>
-  <div class="actions">
+</div>
+<div class="actions">
     <%= f.submit %>
-  </div>
+</div>
 <% end %>
