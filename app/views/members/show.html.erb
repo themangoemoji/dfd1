@@ -22,12 +22,10 @@
     <strong>Joined on:</strong>
     <%= @member.joined_on %>
     </p>
+    <br>
+    <%= link_to 'Edit', edit_member_path(@member) %> |
+    <%= link_to 'Back', members_path %>
 
 </div>
 
 <br>
-
-<div>
-    <%= link_to 'Edit', edit_member_path(@member) %> |
-    <%= link_to 'Back', members_path %>
-</div>

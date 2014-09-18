@@ -1,6 +1,6 @@
 <% @members.each do |member| %>
     <tr>
-    <div class=member">
+    <div class="thumbnail">
         <td><%= member.name %></td>
         <%= image_tag member.picture_url(:thumb).to_s %>
         <td><%= member.position %></td>
